@@ -6,7 +6,7 @@ int main() {
 
     // Pengenalan program
     printf("==== Program Penghitung Kalori Harian ====\n");
-    printf("Program ini akan membantu Anda menghitung total kalori yang dikonsumsi dalam sehari.\n\n");
+    printf("Program ini akan membantu Anda menghitung total kalori yang dikonsumsi.\n\n");
 
     // Mengambil input dari user
     printf("Masukkan kalori makanan pertama: ");
