@@ -1,35 +1,33 @@
 #include <stdio.h>
-#include <string.h>
 
-int main() {
-    char str[100];
-    int i, j, len;
+int main(int argc, char** argv)
+{
+	char str [100]; 
+	int i,j;
+	int penggulangan;
 
-    printf("Masukkan sebuah string: ");
-    fgets(str, sizeof(str), stdin);
+	printf("Masukan string :");
+	gets(str);
+	printf("Karakter unik dalam string  anda adalah ");
 
-    len = strlen(str);
+	  for (i = 0; str[i] != '\0'; i++) {
+		  penggulangan=0;
+			   
 
-    // Loop untuk memeriksa setiap karakter
-    for (i = 0; i < len; i++) {
-        // Asumsikan karakter saat ini unik
-        int isUnique = 1;
+          for (j = 0; j < i; j++) {
+			  if(str[i]==str[j]){
+				  penggulangan=1;
+				  break;
+			  }
+	     }
 
-        // Loop untuk membandingkan dengan karakter sebelumnya
-        for (j = 0; j < i; j++) {
-            if (str[i] == str[j]) {
-                // Jika karakter ditemukan sebelumnya, tandai sebagai tidak unik
-                isUnique = 0;
-                break;
-            }
-        }
-
-        // Jika karakter unik, cetak
-        if (isUnique) {
-            printf("%c", str[i]);
-        }
-    }
-
-    printf("\n");
-    return 0;
+		  if(penggulangan){
+			  continue;
+		  }
+              printf("%c", str[i]);
+	  }
+	printf("\n");
+   
+	
+	return 0;
 }
